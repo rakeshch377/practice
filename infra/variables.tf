@@ -57,3 +57,9 @@ variable "public_access_cidrs" {
   type        = list(string)
   default     = ["0.0.0.0/0"]
 }
+
+variable "cluster_admin_user_arns" {
+  description = "IAM user/role ARNs allowed to assume the cluster-admins role and access the EKS cluster"
+  type        = list(string)
+  default     = ["arn:aws:iam::601314848082:user/raki_aws"]
+}
